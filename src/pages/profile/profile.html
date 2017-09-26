@@ -1,0 +1,74 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add a Team Profile</ion-title>
+    <ion-buttons end>
+    <button (click)="goBack()"> Log Out </button>
+  </ion-buttons>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-item>
+    <ion-label floating>Team Number</ion-label>
+    <ion-input type="text" clearOnEdit="true" [(ngModel)]="profile.num"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Team Name</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.name"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Auto Notes</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.auto"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Tele Notes</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.tele"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Offense Notes</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.off"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Defense Notes</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.def"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Strengths</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.stren"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Weaknesses</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.weak"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Other</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.other"></ion-input>
+
+  </ion-item>
+
+
+  <button ion-button clear block (click)="createProfile()">Add Team</button>
+
+
+</ion-content>
