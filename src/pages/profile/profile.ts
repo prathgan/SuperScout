@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth} from 'angularfire2/auth';
 import { Profile } from '../../models/profile';
+import { Myteam } from '../../models/myteam';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
@@ -19,6 +20,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class ProfilePage {
 
 	profile = {} as Profile;
+  myteam = {} as Myteam;
 
   constructor(private toastCtrl: ToastController, private afDatabase: AngularFireDatabase, private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -27,12 +29,17 @@ export class ProfilePage {
   }
 
   createProfile(){
+    var teamNumber=this.myteam.number;
+    var constantPart='/${auth.uid}';
+    var finished=teamNumber+constantPart;
+    console.log('team2/${auth.uid}');
+    console.log("`" + finished + "`");
   	this.afAuth.authState.take(1).subscribe(auth=>{
-  		this.afDatabase.list(`profile/${auth.uid}`).push(this.profile);
+  		this.afDatabase.list(eval("`" + finished + "`")).push(this.profile);
   	})
   	this.toastCtrl.create({
-        message: `Team Added To Log`,
-        duration: 3000,
+        message: `Team Added To Log of Team ` + teamNumber + `, please visit superscoutportal.github.io to see your log`,
+        duration: 10000,
       }).present();
   }
 
