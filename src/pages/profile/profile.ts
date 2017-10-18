@@ -30,9 +30,8 @@ export class ProfilePage {
 
   createProfile(){
     var teamNumber=this.myteam.number;
-    var constantPart='/${auth.uid}';
+    var constantPart='/ScoutingNotes/${auth.uid}';
     var finished=teamNumber+constantPart;
-    console.log('team2/${auth.uid}');
     console.log("`" + finished + "`");
   	this.afAuth.authState.take(1).subscribe(auth=>{
   		this.afDatabase.list(eval("`" + finished + "`")).push(this.profile);
