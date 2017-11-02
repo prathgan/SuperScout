@@ -1,21 +1,55 @@
-<!--
-  Generated template for the MenuPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>SuperScout Menu</ion-title>
+    <ion-title>Menu</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <ion-list no-borders>
 
-<ion-content padding>
+    <ion-item>
+      <ion-icon name='add' item-start></ion-icon>
+      <ion-icon name='book' item-start></ion-icon>
+      <button item-start ion-button (click)="newTeam()">
+        Add Team
+      </button>
+      <ion-note item-end>
+        Add notes on another team to your log
+      </ion-note>
+    </ion-item>
 
-	<button ion-button (click)="newTeam()" class="center">Add New Team Notes</button>
-	<br>
-	<button ion-button (click)="matchStats()" class="center">Match Stats</button>
+    <ion-item>
+      <ion-icon name='add' item-start></ion-icon>
+      <ion-icon name='game-controller-b' item-start></ion-icon>
+      <button item-start ion-button (click)="matchStats()">
+        Add Match
+      </button>
+      <ion-note item-end>
+        Add total point values and tasks completed for an alliance to your match log
+      </ion-note>
+    </ion-item>
+
+
+  </ion-list>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button ion-button (click)="logOut()">Log Out</button>
+
+
 </ion-content>

@@ -13,6 +13,8 @@ import { AngularFireAuth} from 'angularfire2/auth';
  * Ionic pages and navigation.
  */
 
+
+
  var jewelDone = false;
  var jewelDoneCount = 0;
  var jewelNotDoneCount = 0;
@@ -49,13 +51,28 @@ export class MatchPage {
   myteam = {} as Myteam;
   match = {} as Match;
 
+  public jewelKnocked: boolean;
+  public glyphOne: boolean;
+  public glyphTwo: boolean;
+  public rOneSafe: boolean;
+  public rTwoSafe: boolean;
+
   constructor(private toastCtrl: ToastController, private afDatabase: AngularFireDatabase, private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+	this.jewelKnocked = false;
+	this.glyphOne = false;
+	this.glyphTwo = false;
+	this.rOneSafe = false;
+	this.rTwoSafe = false;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MatchPage');
     this.updateScore();
   }
+
+  public notify() {
+  console.log("Toggled: "+ this.jewelKnocked); 
+}
 
   jewelDoneChange(){
   	jewelDoneCount=jewelDoneCount+1;
@@ -71,7 +88,7 @@ export class MatchPage {
   		console.log(jewelDone);
   		score = score + 30;
   		this.updateScore();
-  		this.match.autoJewel = jewelDone;
+  		this.match.autoJewel = jewelDojewene;
   	}
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the MenuPage page.
@@ -8,6 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+
+
 @IonicPage()
 @Component({
   selector: 'page-menu',
@@ -15,7 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MenuPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+    
   }
 
   ionViewDidLoad() {
@@ -28,6 +33,10 @@ export class MenuPage {
 
   matchStats(){
   	this.navCtrl.push('MatchPage');
+  }
+
+  logOut(){
+
   }
 
 }

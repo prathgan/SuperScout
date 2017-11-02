@@ -8,9 +8,6 @@
 
   <ion-navbar color="primary">
     <ion-title>Add a Team Profile</ion-title>
-    <ion-buttons end>
-    <button (click)="goBack()"> Log Out </button>
-  </ion-buttons>
   </ion-navbar>
 
 
@@ -21,7 +18,12 @@
 <ion-content padding>
   <ion-item>
     <ion-label color="primary">My Team Number</ion-label>
-    <ion-input placeholder="Enter your own team number here (for the Log)" [(ngModel)]="myteam.number"></ion-input>
+    <ion-input placeholder="Enter your team number" [(ngModel)]="myteam.number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">My Name</ion-label>
+    <ion-input placeholder="Enter your own name)" [(ngModel)]="myteam.myname"></ion-input>
   </ion-item>
 
   <ion-item>

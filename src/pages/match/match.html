@@ -30,83 +30,27 @@
 
   </ion-item>
 <h1>Autonomous</h1>
-Jewel Knocked Off?
-	<ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-item>
-      <ion-label>Done</ion-label>
-      <ion-checkbox color="secondary" checked="false" (ionChange)="jewelDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-      <ion-label>Not Done</ion-label>
-      <ion-checkbox color="danger" checked="false" (ionChange)="jewelNotDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-    </ion-row>
-Glyph 1 Scored?
-    <ion-row>
-      <ion-col>
-        <ion-item>
-      <ion-label>Done</ion-label>
-      <ion-checkbox color="secondary" checked="false" (ionChange)="glyphOneDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-      <ion-label>Not Done</ion-label>
-      <ion-checkbox color="danger" checked="false" (ionChange)="glyphOneNotDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-    </ion-row>
-Glyph 2 Scored?
-    <ion-row>
-      <ion-col>
-        <ion-item>
-      <ion-label>Done</ion-label>
-      <ion-checkbox color="secondary" checked="false" (ionChange)="glyphTwoDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-      <ion-label>Not Done</ion-label>
-      <ion-checkbox color="danger" checked="false" (ionChange)="glyphTwoNotDoneChange()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-    </ion-row>
- Robot 1 Parked in Safe Zone?
-    <ion-row>
-      <ion-col>
-        <ion-item>
-      <ion-label>Done</ion-label>
-      <ion-checkbox color="secondary" checked="false" (ionChange)="safeZone()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-      <ion-label>Not Done</ion-label>
-      <ion-checkbox color="danger" checked="false" (ionChange)="notsafeZone()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-    </ion-row>
- Robot 2 Parked in Safe Zone?
-    <ion-row>
-      <ion-col>
-        <ion-item>
-      <ion-label>Done</ion-label>
-      <ion-checkbox color="secondary" checked="false" (ionChange)="safeZoneTwo()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-      <ion-label>Not Done</ion-label>
-      <ion-checkbox color="danger" checked="false" (ionChange)="notsafeZoneTwo()"></ion-checkbox>
-    </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-item>
+<ion-label>Jewel Knocked Off?</ion-label>
+  <ion-toggle color="secondary" [(ngModel)]="jewelKnocked" (ionChange)="jewelDoneChange()"></ion-toggle>
+</ion-item>
+<ion-item>
+<ion-label>Glyph 1 Scored?</ion-label>
+  <ion-toggle color="secondary" [(ngModel)]="glyphOne" (ionChange)="notify()"></ion-toggle>
+</ion-item>
+<ion-item>
+<ion-label>Glyph 2 Scored?</ion-label>
+  <ion-toggle color="secondary" [(ngModel)]="glyphTwo" (ionChange)="notify()"></ion-toggle>
+</ion-item>
+<ion-item>
+<ion-label>Robot 1 Parked in Safe Zone?</ion-label>
+  <ion-toggle color="secondary" [(ngModel)]="rOneSafe" (ionChange)="notify()"></ion-toggle>
+</ion-item>
+<ion-item>
+<ion-label>Robot 2 Parked in Safe Zone?</ion-label>
+  <ion-toggle color="secondary" [(ngModel)]="rTwoSafe" (ionChange)="notify()"></ion-toggle>
+</ion-item>
+    
 <h1>Tele-Op</h1>
 <ion-item>
   <ion-label>Number of Glyphs Scored</ion-label>
