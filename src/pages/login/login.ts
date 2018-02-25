@@ -30,7 +30,7 @@ export class LoginPage {
   const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
   console.log("Success!!!")
   console.log(result);
-  this.navCtrl.push('MenuPage');
+  this.navCtrl.push('ProfilePage');
   this.toastCtrl.create({
         message: `Welcome to SuperScout`,
         duration: 3000,
